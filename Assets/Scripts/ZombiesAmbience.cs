@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zombies_Audio : MonoBehaviour
+public class zombiesBehaviours : MonoBehaviour
 {
-    public AudioClip ZombiesAudio
-;
+    public AudioClip zombiesAudio;
     
     // Start is called before the first frame update
     void Start()
@@ -23,7 +22,7 @@ public class Zombies_Audio : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            gameObject.GetComponent<AudioSource>().PlayOneShot(ZombiesAudio);
+            gameObject.GetComponent<AudioSource>().PlayOneShot(zombiesAudio);
         }
     }
         private void OnTriggerExit(Collider other)
