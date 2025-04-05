@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZombieDeath : MonoBehaviour
 {
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +16,15 @@ public class ZombieDeath : MonoBehaviour
     {
         
     }
+
+     private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Shoot")
+        {
+            //gameObject.GetComponent<AudioSource>().PlayOneShot(zombiesAudio);
+            animator.SetTrigger("Death");
+        }
+    }
 }
+
+

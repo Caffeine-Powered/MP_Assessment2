@@ -24,6 +24,10 @@ public class zombiesBehaviours : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().PlayOneShot(zombiesAudio);
         }
+        if (other.tag == "Shoot")
+        {
+            gameObject.GetComponent<AudioSource>().Stop();
+        }
     }
         private void OnTriggerExit(Collider other)
     {
