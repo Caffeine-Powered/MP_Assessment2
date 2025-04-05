@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieDeath : MonoBehaviour
+public class ZombieDeathL : MonoBehaviour
 {
     public Animator animator;
     public AudioClip zombiesDeathAudio;
@@ -25,7 +25,7 @@ public class ZombieDeath : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().PlayOneShot(zombiesDeathAudio);
             animator.SetTrigger("Death");
-            Destroy(zombieAmbience);
+            //Destroy(zombieAmbience);
         }
     }
 }
