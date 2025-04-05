@@ -6,7 +6,7 @@ public class ZombieDeathL : MonoBehaviour
 {
     public Animator animator;
     public AudioClip zombiesDeathAudio;
-    public AudioClip zombieAmbience;
+    public AudioClip zombieAmbienceL;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,7 @@ public class ZombieDeathL : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().PlayOneShot(zombiesDeathAudio);
             animator.SetTrigger("Death");
-            //Destroy(zombieAmbience);
+            Destroy(zombieAmbienceL);
         }
     }
 }
