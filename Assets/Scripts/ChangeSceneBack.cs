@@ -11,7 +11,7 @@ private void OnTriggerEnter(Collider other)
         if(other.tag == "Token")
         {
             //gameObject.GetComponent<AudioSource>().PlayOneShot(zombiesAudio);
-            SceneManager.LoadSceneAsync(0);
+            SceneManager.LoadSceneAsync(1);
         }
     }
 }
